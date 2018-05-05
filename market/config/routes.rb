@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :products do
+    member do
+      get :favorite
+    end
+  end
   resources :categories
   resources :countries
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
