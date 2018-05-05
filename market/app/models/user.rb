@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
-  belongs_to :country
+  # validates :country
+  belongs_to :country , required: false
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
